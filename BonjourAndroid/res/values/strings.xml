@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Maven Quickstart</string>
+    <string name="hello">Hello bonjour!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="publishing">publishing</string>
+    <string name="publish">publish</string>
+    <string name="discover">discover</string>
+    <string name="published">publihsed</string>
+    <string name="discovering">discovering</string>
+
+</resources>
