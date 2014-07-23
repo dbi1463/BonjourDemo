@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BonjourDiscoveredServicesViewController">
+            <connections>
+                <outlet property="discoverButton" destination="Wyp-Xb-MDX" id="7E8-FP-4s9"/>
+                <outlet property="publishButton" destination="O44-3i-5sF" id="4py-E3-ExL"/>
+                <outlet property="servicesView" destination="omO-dO-k4V" id="PQE-7q-Qkv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView appearanceType="aqua" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="omO-dO-k4V" userLabel="Found Services">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view appearanceType="aqua" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfC-yp-cPL" userLabel="Buttons">
+                    <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O44-3i-5sF" userLabel="Publish">
+                            <rect key="frame" x="50" y="10" width="100" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="Mpa-lb-gmW"/>
+                                <constraint firstAttribute="height" constant="30" id="hcB-fw-NM2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Publish">
+                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="pushlishService:" destination="-1" eventType="touchUpInside" id="aK4-Qu-CM5"/>
+                            </connections>
+                        </button>
+                        <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyp-Xb-MDX" userLabel="Discover">
+                            <rect key="frame" x="170" y="10" width="100" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="GzQ-m9-jnP"/>
+                                <constraint firstAttribute="height" constant="30" id="evp-Io-zps"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Discover">
+                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="discoverServices:" destination="-1" eventType="touchUpInside" id="eS6-kQ-PhX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerY" secondItem="Wyp-Xb-MDX" secondAttribute="centerY" id="7rG-fo-mNR"/>
+                        <constraint firstAttribute="height" constant="50" id="8oD-Wj-9SA"/>
+                        <constraint firstAttribute="centerY" secondItem="O44-3i-5sF" secondAttribute="centerY" id="SFf-3T-JTt"/>
+                        <constraint firstAttribute="trailing" secondItem="Wyp-Xb-MDX" secondAttribute="trailing" constant="50" id="jVF-h4-BPe"/>
+                        <constraint firstItem="O44-3i-5sF" firstAttribute="leading" secondItem="yfC-yp-cPL" secondAttribute="leading" constant="50" id="wsv-QL-23t"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="yfC-yp-cPL" secondAttribute="trailing" id="CR2-U0-mhw"/>
+                <constraint firstItem="omO-dO-k4V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CTO-2u-Ckc"/>
+                <constraint firstItem="yfC-yp-cPL" firstAttribute="top" secondItem="omO-dO-k4V" secondAttribute="bottom" id="DPz-cr-v9Y"/>
+                <constraint firstAttribute="bottom" secondItem="yfC-yp-cPL" secondAttribute="bottom" id="X9U-Lk-NQS"/>
+                <constraint firstAttribute="trailing" secondItem="omO-dO-k4V" secondAttribute="trailing" id="dhx-n2-dsI"/>
+                <constraint firstItem="yfC-yp-cPL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gnY-XU-Q46"/>
+                <constraint firstItem="omO-dO-k4V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oLe-RN-E4i"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

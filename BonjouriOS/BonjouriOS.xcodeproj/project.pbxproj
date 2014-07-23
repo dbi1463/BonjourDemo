@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E6F1F5E197F7FB800FF318D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6F1F5D197F7FB800FF318D /* Foundation.framework */; };
+		1E6F1F60197F7FB800FF318D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6F1F5F197F7FB800FF318D /* CoreGraphics.framework */; };
+		1E6F1F62197F7FB800FF318D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6F1F61197F7FB800FF318D /* UIKit.framework */; };
+		1E6F1F68197F7FB800FF318D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F1F66197F7FB800FF318D /* InfoPlist.strings */; };
+		1E6F1F6A197F7FB800FF318D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F1F69197F7FB800FF318D /* main.m */; };
+		1E6F1F6E197F7FB800FF318D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F1F6D197F7FB800FF318D /* AppDelegate.m */; };
+		1E6F1F76197F7FB800FF318D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F1F75197F7FB800FF318D /* Images.xcassets */; };
+		1E6F1F7D197F7FB800FF318D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6F1F7C197F7FB800FF318D /* XCTest.framework */; };
+		1E6F1F7E197F7FB800FF318D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6F1F5D197F7FB800FF318D /* Foundation.framework */; };
+		1E6F1F7F197F7FB800FF318D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6F1F61197F7FB800FF318D /* UIKit.framework */; };
+		1E6F1F87197F7FB800FF318D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F1F85197F7FB800FF318D /* InfoPlist.strings */; };
+		1E6F1F89197F7FB800FF318D /* BonjouriOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F1F88197F7FB800FF318D /* BonjouriOSTests.m */; };
+		1E6F1F97197F80CF00FF318D /* BonjourDiscoveredServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F1F95197F80CF00FF318D /* BonjourDiscoveredServicesViewController.m */; };
+		1E6F1F98197F80CF00FF318D /* BonjourDiscoveredServicesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F1F96197F80CF00FF318D /* BonjourDiscoveredServicesView.xib */; };
+		1E6F1F9C197F817500FF318D /* BonjourDiscoveredServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F1F9A197F817500FF318D /* BonjourDiscoveredServiceCell.m */; };
+		1E6F1F9D197F817500FF318D /* BonjourDiscoveredServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F1F9B197F817500FF318D /* BonjourDiscoveredServiceCell.xib */; };
+		1E6F1FA3197F84D700FF318D /* BonjourDiscoveredServicesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F1FA2197F84D700FF318D /* BonjourDiscoveredServicesDataSource.m */; };
+		1E6F1FA7197F897E00FF318D /* BonjourServicesDiscoverer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F1FA6197F897E00FF318D /* BonjourServicesDiscoverer.m */; };
+		1E70D778197FAF910043EE13 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E70D777197FAF910043EE13 /* CoreFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E6F1F80197F7FB800FF318D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E6F1F52197F7FB800FF318D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E6F1F59197F7FB800FF318D;
+			remoteInfo = BonjouriOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E6F1F5A197F7FB800FF318D /* BonjouriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonjouriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E6F1F5D197F7FB800FF318D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1E6F1F5F197F7FB800FF318D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1E6F1F61197F7FB800FF318D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1E6F1F65197F7FB800FF318D /* BonjouriOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BonjouriOS-Info.plist"; sourceTree = "<group>"; };
+		1E6F1F67197F7FB800FF318D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1E6F1F69197F7FB800FF318D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1E6F1F6B197F7FB800FF318D /* BonjouriOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BonjouriOS-Prefix.pch"; sourceTree = "<group>"; };
+		1E6F1F6C197F7FB800FF318D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1E6F1F6D197F7FB800FF318D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1E6F1F75197F7FB800FF318D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1E6F1F7B197F7FB800FF318D /* BonjouriOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonjouriOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E6F1F7C197F7FB800FF318D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1E6F1F84197F7FB800FF318D /* BonjouriOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BonjouriOSTests-Info.plist"; sourceTree = "<group>"; };
+		1E6F1F86197F7FB800FF318D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1E6F1F88197F7FB800FF318D /* BonjouriOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BonjouriOSTests.m; sourceTree = "<group>"; };
+		1E6F1F94197F80CF00FF318D /* BonjourDiscoveredServicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BonjourDiscoveredServicesViewController.h; sourceTree = "<group>"; };
+		1E6F1F95197F80CF00FF318D /* BonjourDiscoveredServicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BonjourDiscoveredServicesViewController.m; sourceTree = "<group>"; };
+		1E6F1F96197F80CF00FF318D /* BonjourDiscoveredServicesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BonjourDiscoveredServicesView.xib; sourceTree = "<group>"; };
+		1E6F1F99197F817500FF318D /* BonjourDiscoveredServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BonjourDiscoveredServiceCell.h; sourceTree = "<group>"; };
+		1E6F1F9A197F817500FF318D /* BonjourDiscoveredServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BonjourDiscoveredServiceCell.m; sourceTree = "<group>"; };
+		1E6F1F9B197F817500FF318D /* BonjourDiscoveredServiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BonjourDiscoveredServiceCell.xib; sourceTree = "<group>"; };
+		1E6F1FA1197F84D700FF318D /* BonjourDiscoveredServicesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BonjourDiscoveredServicesDataSource.h; sourceTree = "<group>"; };
+		1E6F1FA2197F84D700FF318D /* BonjourDiscoveredServicesDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BonjourDiscoveredServicesDataSource.m; sourceTree = "<group>"; };
+		1E6F1FA4197F88A900FF318D /* BonjourDiscoveredServicesDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BonjourDiscoveredServicesDelegate.h; sourceTree = "<group>"; };
+		1E6F1FA5197F897E00FF318D /* BonjourServicesDiscoverer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BonjourServicesDiscoverer.h; sourceTree = "<group>"; };
+		1E6F1FA6197F897E00FF318D /* BonjourServicesDiscoverer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BonjourServicesDiscoverer.m; sourceTree = "<group>"; };
+		1E6F1FA8197F8EF300FF318D /* BonjourDiscoveredServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BonjourDiscoveredServices.h; sourceTree = "<group>"; };
+		1E70D777197FAF910043EE13 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E6F1F57197F7FB800FF318D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E70D778197FAF910043EE13 /* CoreFoundation.framework in Frameworks */,
+				1E6F1F60197F7FB800FF318D /* CoreGraphics.framework in Frameworks */,
+				1E6F1F62197F7FB800FF318D /* UIKit.framework in Frameworks */,
+				1E6F1F5E197F7FB800FF318D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E6F1F78197F7FB800FF318D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6F1F7D197F7FB800FF318D /* XCTest.framework in Frameworks */,
+				1E6F1F7F197F7FB800FF318D /* UIKit.framework in Frameworks */,
+				1E6F1F7E197F7FB800FF318D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E6F1F51197F7FB800FF318D = {
+			isa = PBXGroup;
+			children = (
+				1E6F1F63197F7FB800FF318D /* BonjouriOS */,
+				1E6F1F82197F7FB800FF318D /* BonjouriOSTests */,
+				1E6F1F5C197F7FB800FF318D /* Frameworks */,
+				1E6F1F5B197F7FB800FF318D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E6F1F5B197F7FB800FF318D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E6F1F5A197F7FB800FF318D /* BonjouriOS.app */,
+				1E6F1F7B197F7FB800FF318D /* BonjouriOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E6F1F5C197F7FB800FF318D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E70D777197FAF910043EE13 /* CoreFoundation.framework */,
+				1E6F1F5D197F7FB800FF318D /* Foundation.framework */,
+				1E6F1F5F197F7FB800FF318D /* CoreGraphics.framework */,
+				1E6F1F61197F7FB800FF318D /* UIKit.framework */,
+				1E6F1F7C197F7FB800FF318D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E6F1F63197F7FB800FF318D /* BonjouriOS */ = {
+			isa = PBXGroup;
+			children = (
+				1E6F1F6C197F7FB800FF318D /* AppDelegate.h */,
+				1E6F1F6D197F7FB800FF318D /* AppDelegate.m */,
+				1E6F1F75197F7FB800FF318D /* Images.xcassets */,
+				1E6F1F64197F7FB800FF318D /* Supporting Files */,
+				1E6F1F94197F80CF00FF318D /* BonjourDiscoveredServicesViewController.h */,
+				1E6F1F95197F80CF00FF318D /* BonjourDiscoveredServicesViewController.m */,
+				1E6F1F96197F80CF00FF318D /* BonjourDiscoveredServicesView.xib */,
+				1E6F1F99197F817500FF318D /* BonjourDiscoveredServiceCell.h */,
+				1E6F1F9A197F817500FF318D /* BonjourDiscoveredServiceCell.m */,
+				1E6F1F9B197F817500FF318D /* BonjourDiscoveredServiceCell.xib */,
+				1E6F1FA1197F84D700FF318D /* BonjourDiscoveredServicesDataSource.h */,
+				1E6F1FA2197F84D700FF318D /* BonjourDiscoveredServicesDataSource.m */,
+				1E6F1FA4197F88A900FF318D /* BonjourDiscoveredServicesDelegate.h */,
+				1E6F1FA5197F897E00FF318D /* BonjourServicesDiscoverer.h */,
+				1E6F1FA6197F897E00FF318D /* BonjourServicesDiscoverer.m */,
+				1E6F1FA8197F8EF300FF318D /* BonjourDiscoveredServices.h */,
+			);
+			path = BonjouriOS;
+			sourceTree = "<group>";
+		};
+		1E6F1F64197F7FB800FF318D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E6F1F65197F7FB800FF318D /* BonjouriOS-Info.plist */,
+				1E6F1F66197F7FB800FF318D /* InfoPlist.strings */,
+				1E6F1F69197F7FB800FF318D /* main.m */,
+				1E6F1F6B197F7FB800FF318D /* BonjouriOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1E6F1F82197F7FB800FF318D /* BonjouriOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E6F1F88197F7FB800FF318D /* BonjouriOSTests.m */,
+				1E6F1F83197F7FB800FF318D /* Supporting Files */,
+			);
+			path = BonjouriOSTests;
+			sourceTree = "<group>";
+		};
+		1E6F1F83197F7FB800FF318D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E6F1F84197F7FB800FF318D /* BonjouriOSTests-Info.plist */,
+				1E6F1F85197F7FB800FF318D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E6F1F59197F7FB800FF318D /* BonjouriOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E6F1F8C197F7FB800FF318D /* Build configuration list for PBXNativeTarget "BonjouriOS" */;
+			buildPhases = (
+				1E6F1F56197F7FB800FF318D /* Sources */,
+				1E6F1F57197F7FB800FF318D /* Frameworks */,
+				1E6F1F58197F7FB800FF318D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BonjouriOS;
+			productName = BonjouriOS;
+			productReference = 1E6F1F5A197F7FB800FF318D /* BonjouriOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E6F1F7A197F7FB800FF318D /* BonjouriOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E6F1F8F197F7FB800FF318D /* Build configuration list for PBXNativeTarget "BonjouriOSTests" */;
+			buildPhases = (
+				1E6F1F77197F7FB800FF318D /* Sources */,
+				1E6F1F78197F7FB800FF318D /* Frameworks */,
+				1E6F1F79197F7FB800FF318D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E6F1F81197F7FB800FF318D /* PBXTargetDependency */,
+			);
+			name = BonjouriOSTests;
+			productName = BonjouriOSTests;
+			productReference = 1E6F1F7B197F7FB800FF318D /* BonjouriOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E6F1F52197F7FB800FF318D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = funymph;
+				TargetAttributes = {
+					1E6F1F7A197F7FB800FF318D = {
+						TestTargetID = 1E6F1F59197F7FB800FF318D;
+					};
+				};
+			};
+			buildConfigurationList = 1E6F1F55197F7FB800FF318D /* Build configuration list for PBXProject "BonjouriOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E6F1F51197F7FB800FF318D;
+			productRefGroup = 1E6F1F5B197F7FB800FF318D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E6F1F59197F7FB800FF318D /* BonjouriOS */,
+				1E6F1F7A197F7FB800FF318D /* BonjouriOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E6F1F58197F7FB800FF318D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6F1F98197F80CF00FF318D /* BonjourDiscoveredServicesView.xib in Resources */,
+				1E6F1F76197F7FB800FF318D /* Images.xcassets in Resources */,
+				1E6F1F9D197F817500FF318D /* BonjourDiscoveredServiceCell.xib in Resources */,
+				1E6F1F68197F7FB800FF318D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E6F1F79197F7FB800FF318D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6F1F87197F7FB800FF318D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E6F1F56197F7FB800FF318D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6F1F97197F80CF00FF318D /* BonjourDiscoveredServicesViewController.m in Sources */,
+				1E6F1FA3197F84D700FF318D /* BonjourDiscoveredServicesDataSource.m in Sources */,
+				1E6F1F9C197F817500FF318D /* BonjourDiscoveredServiceCell.m in Sources */,
+				1E6F1FA7197F897E00FF318D /* BonjourServicesDiscoverer.m in Sources */,
+				1E6F1F6E197F7FB800FF318D /* AppDelegate.m in Sources */,
+				1E6F1F6A197F7FB800FF318D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E6F1F77197F7FB800FF318D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6F1F89197F7FB800FF318D /* BonjouriOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E6F1F81197F7FB800FF318D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E6F1F59197F7FB800FF318D /* BonjouriOS */;
+			targetProxy = 1E6F1F80197F7FB800FF318D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1E6F1F66197F7FB800FF318D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E6F1F67197F7FB800FF318D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1E6F1F85197F7FB800FF318D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E6F1F86197F7FB800FF318D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E6F1F8A197F7FB800FF318D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1E6F1F8B197F7FB800FF318D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E6F1F8D197F7FB800FF318D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BonjouriOS/BonjouriOS-Prefix.pch";
+				INFOPLIST_FILE = "BonjouriOS/BonjouriOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1E6F1F8E197F7FB800FF318D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BonjouriOS/BonjouriOS-Prefix.pch";
+				INFOPLIST_FILE = "BonjouriOS/BonjouriOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1E6F1F90197F7FB800FF318D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BonjouriOS.app/BonjouriOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BonjouriOS/BonjouriOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BonjouriOSTests/BonjouriOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1E6F1F91197F7FB800FF318D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BonjouriOS.app/BonjouriOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BonjouriOS/BonjouriOS-Prefix.pch";
+				INFOPLIST_FILE = "BonjouriOSTests/BonjouriOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E6F1F55197F7FB800FF318D /* Build configuration list for PBXProject "BonjouriOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E6F1F8A197F7FB800FF318D /* Debug */,
+				1E6F1F8B197F7FB800FF318D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E6F1F8C197F7FB800FF318D /* Build configuration list for PBXNativeTarget "BonjouriOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E6F1F8D197F7FB800FF318D /* Debug */,
+				1E6F1F8E197F7FB800FF318D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E6F1F8F197F7FB800FF318D /* Build configuration list for PBXNativeTarget "BonjouriOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E6F1F90197F7FB800FF318D /* Debug */,
+				1E6F1F91197F7FB800FF318D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E6F1F52197F7FB800FF318D /* Project object */;
+}

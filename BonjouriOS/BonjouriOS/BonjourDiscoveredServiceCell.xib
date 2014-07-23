@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BonjourDiscoveredServiceCell" id="KGk-i7-Jjw" userLabel="Bonjour Discovered Service Cell" customClass="BonjourDiscoveredServiceCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-6B-IwE" userLabel="Service Name">
+                        <rect key="frame" x="10" y="10" width="300" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ahc-6B-IwE" secondAttribute="bottom" constant="10" id="26G-JT-hhQ"/>
+                    <constraint firstItem="ahc-6B-IwE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="55P-qW-eFt"/>
+                    <constraint firstItem="ahc-6B-IwE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="L8n-tY-xdV"/>
+                    <constraint firstAttribute="trailing" secondItem="ahc-6B-IwE" secondAttribute="trailing" constant="10" id="wJO-bZ-Iwb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="serviceNameLabel" destination="ahc-6B-IwE" id="PlN-dy-T6g"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
