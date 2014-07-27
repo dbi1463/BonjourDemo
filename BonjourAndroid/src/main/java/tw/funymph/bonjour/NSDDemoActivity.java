@@ -53,6 +53,7 @@ public class NSDDemoActivity extends Activity implements RegistrationListener, D
 	public void onDestroy() {
 		super.onDestroy();
 		depublishService();
+		stopDiscovery();
 	}
 
 	@Override
@@ -79,7 +80,7 @@ public class NSDDemoActivity extends Activity implements RegistrationListener, D
 		else {
 			stopDiscovery();
 		}
-    }
+	}
 
 	// Listener Methods for Network Service Discovery
 	public void onRegistrationFailed(NsdServiceInfo serviceInfo, final int errorCode) {
@@ -167,14 +168,18 @@ public class NSDDemoActivity extends Activity implements RegistrationListener, D
 
 	// Private Methods
 	private void stopDiscovery() {
-		_discovering = false;
-		_discoveredServices.clear();
-		_serviceDiscoverManager.stopServiceDiscovery(this);
+		if (_discovering) {
+			_discovering = false;
+			_discoveredServices.clear();
+			_serviceDiscoverManager.stopServiceDiscovery(this);
+		}
 	}
 
 	private void startDiscovery() {
-		_discovering = true;
-		_serviceDiscoverManager.discoverServices("_chat._tcp.", NsdManager.PROTOCOL_DNS_SD, this);
+		if (!_discovering) {
+			_discovering = true;
+			_serviceDiscoverManager.discoverServices("_chat._tcp.", NsdManager.PROTOCOL_DNS_SD, this);
+		}
 	}
 
 	private void depublishService() {
@@ -196,27 +201,27 @@ public class NSDDemoActivity extends Activity implements RegistrationListener, D
 
 	private void publishService() {
 		int port = startServerSocket();
-		if(port == 0) {
+		if (port == 0) {
 			Toast.makeText(this, "unable to create a server socket for the service", 3);
 			_publishButton.setClickable(true);
 			_publishButton.setText(R.string.publish);
 			return;
 		}
-	    NsdServiceInfo service = createService(port);
-	    if(service != null) {
-	    	Log.d("network", "start to register a service " + _serviceDiscoverManager);
+		NsdServiceInfo service = createService(port);
+		if (service != null) {
+			Log.d("network", "start to register a service " + _serviceDiscoverManager);
 			_serviceDiscoverManager.registerService(service, NsdManager.PROTOCOL_DNS_SD, this);
 			_published = true;
 			Log.d("network", "registering a service " + service);
-	    }
+		}
 	}
 
 	private NsdServiceInfo createService(int port) {
-	    NsdServiceInfo service  = new NsdServiceInfo();
-	    service.setServiceName("someone on Android");
-	    service.setServiceType("_chat._tcp.");
-	    service.setPort(port);
-	    return service;
+		NsdServiceInfo service  = new NsdServiceInfo();
+		service.setServiceName("someone on Android");
+		service.setServiceType("_chat._tcp.");
+		service.setPort(port);
+		return service;
 	}
 
 	private int startServerSocket() {

@@ -10,13 +10,11 @@
 
 #import "BonjourDiscoveredServicesDelegate.h"
 
-@protocol BonjourDiscoveredServices <NSObject>
+@interface BonjourDiscoveredServices : NSObject<NSNetServiceBrowserDelegate, UITableViewDataSource>
 
-- (void)addService:(NSNetService*)service;
+- (void)startDiscovery;
 
-- (void)removeService:(NSNetService*)service;
-
-- (void)removeAll;
+- (void)stopDiscovery;
 
 @property (weak, nonatomic) id<BonjourDiscoveredServicesDelegate> delegate;
 

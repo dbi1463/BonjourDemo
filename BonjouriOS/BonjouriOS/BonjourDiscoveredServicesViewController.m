@@ -8,24 +8,21 @@
 
 #import "BonjourDiscoveredServicesViewController.h"
 
-#import "BonjourServicesDiscoverer.h"
-#import "BonjourDiscoveredServicesDataSource.h"
+#import "BonjourDiscoveredServices.h"
 
 @implementation BonjourDiscoveredServicesViewController {
 	NSNetService* _publishingService;
-	BonjourServicesDiscoverer* _servicesDiscoverer;
-	BonjourDiscoveredServicesDataSource* _services;
+	BonjourDiscoveredServices* _services;
 }
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.title = @"Bonjour";
-	_services = [[BonjourDiscoveredServicesDataSource alloc] init];
+	_services = [[BonjourDiscoveredServices alloc] init];
 	_services.delegate = self;
 	self.servicesView.dataSource = _services;
 	_publishingService = [[NSNetService alloc] initWithDomain:@"" type:@"_chat._tcp." name:@"someone on iOS" port:9166];
 	_publishingService.delegate = self;
-	_servicesDiscoverer = [[BonjourServicesDiscoverer alloc] initWithContainer:_services];
 }
 
 - (void)discoveredServicesChanged {
@@ -45,12 +42,12 @@
 
 - (IBAction)discoverServices:(id)sender {
 	if (self.discovering) {
-		[_servicesDiscoverer stop];
+		[_services stopDiscovery];
 		self.discovering = NO;
 		[self.discoverButton setTitle:@"Discover" forState:UIControlStateNormal];
 	}
 	else {
-		[_servicesDiscoverer start];
+		[_services startDiscovery];
 		self.discovering = YES;
 		[self.discoverButton setTitle:@"Discovering" forState:UIControlStateNormal];
 	}

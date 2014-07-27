@@ -23,8 +23,7 @@
 		1E6F1F98197F80CF00FF318D /* BonjourDiscoveredServicesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F1F96197F80CF00FF318D /* BonjourDiscoveredServicesView.xib */; };
 		1E6F1F9C197F817500FF318D /* BonjourDiscoveredServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F1F9A197F817500FF318D /* BonjourDiscoveredServiceCell.m */; };
 		1E6F1F9D197F817500FF318D /* BonjourDiscoveredServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F1F9B197F817500FF318D /* BonjourDiscoveredServiceCell.xib */; };
-		1E6F1FA3197F84D700FF318D /* BonjourDiscoveredServicesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F1FA2197F84D700FF318D /* BonjourDiscoveredServicesDataSource.m */; };
-		1E6F1FA7197F897E00FF318D /* BonjourServicesDiscoverer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F1FA6197F897E00FF318D /* BonjourServicesDiscoverer.m */; };
+		1E6F1FA3197F84D700FF318D /* BonjourDiscoveredServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F1FA2197F84D700FF318D /* BonjourDiscoveredServices.m */; };
 		1E70D778197FAF910043EE13 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E70D777197FAF910043EE13 /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,12 +60,9 @@
 		1E6F1F99197F817500FF318D /* BonjourDiscoveredServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BonjourDiscoveredServiceCell.h; sourceTree = "<group>"; };
 		1E6F1F9A197F817500FF318D /* BonjourDiscoveredServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BonjourDiscoveredServiceCell.m; sourceTree = "<group>"; };
 		1E6F1F9B197F817500FF318D /* BonjourDiscoveredServiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BonjourDiscoveredServiceCell.xib; sourceTree = "<group>"; };
-		1E6F1FA1197F84D700FF318D /* BonjourDiscoveredServicesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BonjourDiscoveredServicesDataSource.h; sourceTree = "<group>"; };
-		1E6F1FA2197F84D700FF318D /* BonjourDiscoveredServicesDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BonjourDiscoveredServicesDataSource.m; sourceTree = "<group>"; };
+		1E6F1FA1197F84D700FF318D /* BonjourDiscoveredServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BonjourDiscoveredServices.h; sourceTree = "<group>"; };
+		1E6F1FA2197F84D700FF318D /* BonjourDiscoveredServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BonjourDiscoveredServices.m; sourceTree = "<group>"; };
 		1E6F1FA4197F88A900FF318D /* BonjourDiscoveredServicesDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BonjourDiscoveredServicesDelegate.h; sourceTree = "<group>"; };
-		1E6F1FA5197F897E00FF318D /* BonjourServicesDiscoverer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BonjourServicesDiscoverer.h; sourceTree = "<group>"; };
-		1E6F1FA6197F897E00FF318D /* BonjourServicesDiscoverer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BonjourServicesDiscoverer.m; sourceTree = "<group>"; };
-		1E6F1FA8197F8EF300FF318D /* BonjourDiscoveredServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BonjourDiscoveredServices.h; sourceTree = "<group>"; };
 		1E70D777197FAF910043EE13 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -139,12 +135,9 @@
 				1E6F1F99197F817500FF318D /* BonjourDiscoveredServiceCell.h */,
 				1E6F1F9A197F817500FF318D /* BonjourDiscoveredServiceCell.m */,
 				1E6F1F9B197F817500FF318D /* BonjourDiscoveredServiceCell.xib */,
-				1E6F1FA1197F84D700FF318D /* BonjourDiscoveredServicesDataSource.h */,
-				1E6F1FA2197F84D700FF318D /* BonjourDiscoveredServicesDataSource.m */,
+				1E6F1FA1197F84D700FF318D /* BonjourDiscoveredServices.h */,
+				1E6F1FA2197F84D700FF318D /* BonjourDiscoveredServices.m */,
 				1E6F1FA4197F88A900FF318D /* BonjourDiscoveredServicesDelegate.h */,
-				1E6F1FA5197F897E00FF318D /* BonjourServicesDiscoverer.h */,
-				1E6F1FA6197F897E00FF318D /* BonjourServicesDiscoverer.m */,
-				1E6F1FA8197F8EF300FF318D /* BonjourDiscoveredServices.h */,
 			);
 			path = BonjouriOS;
 			sourceTree = "<group>";
@@ -277,9 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E6F1F97197F80CF00FF318D /* BonjourDiscoveredServicesViewController.m in Sources */,
-				1E6F1FA3197F84D700FF318D /* BonjourDiscoveredServicesDataSource.m in Sources */,
+				1E6F1FA3197F84D700FF318D /* BonjourDiscoveredServices.m in Sources */,
 				1E6F1F9C197F817500FF318D /* BonjourDiscoveredServiceCell.m in Sources */,
-				1E6F1FA7197F897E00FF318D /* BonjourServicesDiscoverer.m in Sources */,
 				1E6F1F6E197F7FB800FF318D /* AppDelegate.m in Sources */,
 				1E6F1F6A197F7FB800FF318D /* main.m in Sources */,
 			);

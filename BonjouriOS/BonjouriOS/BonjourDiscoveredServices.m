@@ -6,22 +6,35 @@
 //  Copyright (c) 2014 funymph. All rights reserved.
 //
 
-#import "BonjourDiscoveredServicesDataSource.h"
+#import "BonjourDiscoveredServices.h"
 
 #import "BonjourDiscoveredServiceCell.h"
 
-@implementation BonjourDiscoveredServicesDataSource {
+@implementation BonjourDiscoveredServices {
 	NSArray* _serviceNames;
+	NSNetServiceBrowser* _browser;
 	NSMutableDictionary* _servcies;
 }
-
-@synthesize delegate;
 
 - (instancetype)init {
 	if (self = [super init]) {
 		_servcies = [NSMutableDictionary new];
+		_browser = [[NSNetServiceBrowser alloc] init];
+		_browser.delegate = self;
+		_browser.includesPeerToPeer = YES;
 	}
 	return self;
+}
+
+- (void)startDiscovery {
+	[_browser searchForServicesOfType:@"_chat._tcp." inDomain:@"local."];
+}
+
+- (void)stopDiscovery {
+	[_browser stop];
+	dispatch_async(dispatch_get_main_queue(), ^() {
+		[self removeAll];
+	});
 }
 
 - (void)addService:(NSNetService*)service {
@@ -46,6 +59,7 @@
 	[self.delegate discoveredServicesChanged];
 }
 
+#pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
 	return [_servcies count];
 }
@@ -58,6 +72,29 @@
 	NSNetService* service = [_servcies objectForKey:[_serviceNames objectAtIndex:indexPath.row]];
 	cell.service = service;
 	return cell;
+}
+
+#pragma mark - NSNetServiceBrowserDelegate
+- (void)netServiceBrowser:(NSNetServiceBrowser*)browser didFindService:(NSNetService*)service moreComing:(BOOL)moreComing {
+	NSLog(@"service: %@ found", service);
+	dispatch_async(dispatch_get_main_queue(), ^() {
+		[self addService:service];
+	});
+}
+
+- (void)netServiceBrowser:(NSNetServiceBrowser*)aNetServiceBrowser didNotSearch:(NSDictionary*)errorDict {
+	NSLog(@"failed to discover services, due to %@", errorDict);
+}
+
+- (void)netServiceBrowser:(NSNetServiceBrowser*)browser didRemoveService:(NSNetService*)service moreComing:(BOOL)moreComing {
+	NSLog(@"service: %@ removed", service);
+	dispatch_async(dispatch_get_main_queue(), ^() {
+		[self removeService:service];
+	});
+}
+
+- (void)netServiceBrowserDidStopSearch:(NSNetServiceBrowser*)aNetServiceBrowser {
+	NSLog(@"service browser stopped");
 }
 
 @end
