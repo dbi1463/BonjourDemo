@@ -12,7 +12,8 @@
 
 @interface BonjourDiscoveredServicesViewController : UIViewController<NSNetServiceDelegate, BonjourDiscoveredServicesDelegate>
 
-@property (nonatomic) BOOL discovering;
+@property (atomic) BOOL published;
+@property (atomic) BOOL discovering;
 
 @property (weak, nonatomic) IBOutlet UIButton* publishButton;
 @property (weak, nonatomic) IBOutlet UIButton* discoverButton;

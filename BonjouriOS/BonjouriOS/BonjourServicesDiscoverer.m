@@ -28,6 +28,9 @@
 
 - (void)stop {
 	[_browser stop];
+	dispatch_async(dispatch_get_main_queue(), ^() {
+		[self.serviceContainer removeAll];
+	});
 }
 
 - (void)netServiceBrowser:(NSNetServiceBrowser*)browser didFindService:(NSNetService*)service moreComing:(BOOL)moreComing {

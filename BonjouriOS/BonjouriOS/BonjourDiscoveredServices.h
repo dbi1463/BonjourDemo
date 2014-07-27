@@ -16,6 +16,8 @@
 
 - (void)removeService:(NSNetService*)service;
 
+- (void)removeAll;
+
 @property (weak, nonatomic) id<BonjourDiscoveredServicesDelegate> delegate;
 
 @end

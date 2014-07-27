@@ -23,7 +23,7 @@
 	_services = [[BonjourDiscoveredServicesDataSource alloc] init];
 	_services.delegate = self;
 	self.servicesView.dataSource = _services;
-	_publishingService = [[NSNetService alloc] initWithDomain:@"local." type:@"_chat._tcp." name:@"someone on iOS" port:9166];
+	_publishingService = [[NSNetService alloc] initWithDomain:@"" type:@"_chat._tcp." name:@"someone on iOS" port:9166];
 	_publishingService.delegate = self;
 	_servicesDiscoverer = [[BonjourServicesDiscoverer alloc] initWithContainer:_services];
 }
@@ -34,8 +34,13 @@
 
 - (IBAction)pushlishService:(id)sender {
 	[self.publishButton setEnabled:NO];
-	[self.publishButton setTitle:@"Publishing" forState:UIControlStateNormal];
-	[_publishingService publish];
+	if (self.published) {
+		[_publishingService stop];
+	}
+	else {
+		[self.publishButton setTitle:@"Publishing" forState:UIControlStateNormal];
+		[_publishingService publish];
+	}
 }
 
 - (IBAction)discoverServices:(id)sender {
@@ -51,15 +56,27 @@
 	}
 }
 
+- (void)netServiceDidStop:(NSNetService*)sender {
+	[self resetPublishStatus];
+	NSLog(@"service depublished");
+}
+
 - (void)netService:(NSNetService*)sender didNotPublish:(NSDictionary*)errorDict {
-	[self.publishButton setEnabled:YES];
-	[self.publishButton setTitle:@"Publish" forState:UIControlStateNormal];
+	[self resetPublishStatus];
 	NSLog(@"failed to publish services: %@, due to %@", sender.description, errorDict);
 }
 
 - (void)netServiceDidPublish:(NSNetService *)sender {
-	[self.publishButton setTitle:@"Published" forState:UIControlStateDisabled];
+	self.published = YES;
+	[self.publishButton setEnabled:YES];
+	[self.publishButton setTitle:@"Depublish" forState:UIControlStateNormal];
 	NSLog(@"service: %@ published", sender.description);
+}
+
+- (void)resetPublishStatus {
+	self.published = NO;
+	[self.publishButton setEnabled:YES];
+	[self.publishButton setTitle:@"Publish" forState:UIControlStateNormal];
 }
 
 @end

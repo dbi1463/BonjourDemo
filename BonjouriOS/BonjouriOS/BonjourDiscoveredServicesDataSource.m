@@ -13,7 +13,6 @@
 @implementation BonjourDiscoveredServicesDataSource {
 	NSArray* _serviceNames;
 	NSMutableDictionary* _servcies;
-	NSSortDescriptor* _serviceNameSorter;
 }
 
 @synthesize delegate;
@@ -21,7 +20,6 @@
 - (instancetype)init {
 	if (self = [super init]) {
 		_servcies = [NSMutableDictionary new];
-		_serviceNameSorter = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
 	}
 	return self;
 }
@@ -29,7 +27,7 @@
 - (void)addService:(NSNetService*)service {
 	if (service.name != nil && service.name.length > 0) {
 		[_servcies setObject:service forKey:service.name];
-		_serviceNames = [[_servcies allKeys] sortedArrayUsingDescriptors:@[ _serviceNameSorter ]];
+		_serviceNames = [[_servcies allKeys] sortedArrayUsingSelector:@selector(compare:)];
 	}
 	[self.delegate discoveredServicesChanged];
 }
@@ -37,8 +35,14 @@
 - (void)removeService:(NSNetService*)service {
 	if (service.name != nil && service.name.length > 0) {
 		[_servcies removeObjectForKey:service.name];
-		_serviceNames = [[_servcies allKeys] sortedArrayUsingDescriptors:@[ _serviceNameSorter ]];
+		_serviceNames = [[_servcies allKeys] sortedArrayUsingSelector:@selector(compare:)];
 	}
+	[self.delegate discoveredServicesChanged];
+}
+
+- (void)removeAll {
+	[_servcies removeAllObjects];
+	_serviceNames = @[];
 	[self.delegate discoveredServicesChanged];
 }
 

@@ -22,9 +22,9 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.github.rickyclarkson</groupId>
+			<groupId>javax.jmdns</groupId>
 			<artifactId>jmdns</artifactId>
-			<version>3.4.2-r353-1</version>
+			<version>3.4.1</version>
 		</dependency>
 	</dependencies>
 	<build>
